@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+*{ margin: 0;
+    padding: 0;
+}
+.wrapper{
+    background-color:#333;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 300px;
+}
+.door{
+    width: 100px;
+    height: 150px;
+    position: relative;
+}
+.door > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.door-back{
+    background-color:black;
+}
+.door-front{
+    transform-origin: 0%;
+    transition: 0.5s;
+}
+.door:nth-child(1) .door-front{
+    background-color: red;
+}
+.door:nth-child(2) .door-front{
+    background-color: green;
+}
+.door:nth-child(3) .door-front{
+    background-color: blue;
+}
+.door-open .door-front{
+    transform: perspective(500px) rotateY(-120deg);
+}
+
+
+
+
+
+
+
+
+/* .door-back{
+    width: 100px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    
+}
+.door-front{
+    width: 100px;
+    height: 200px;
+    background-color: green;
+    position: absolute;
+    left: 100px;
+    transform-origin: 150px;
+}
+.door-front:hover {
+    transform: rotateY(300deg);
+    transform: ;
+
+    opacity: 0.6;
+} */
